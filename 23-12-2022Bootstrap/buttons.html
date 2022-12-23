@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .hello {
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            border: 5px solid;
+            border-top:5px solid white;
+            border-radius: 50%;
+            animation: rotaa 1s linear infinite;
+        }
+        @keyframes rotaa {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        
+            
+        }
+        .customColor{
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+
+    <nav class="navbar navbar-light customColor" style="margin: 10px 1px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+        </div>
+      </nav>
+    <!-- buttons -->
+    <button class="btn btn-primary">go live</button>
+    <button class="btn btn-success">go live</button>
+    <button class="btn btn-info">go live</button>
+    <button class="btn btn-warning">go live</button>
+    <button class="btn btn-warning bg-success">go live</button>
+    <button class="btn btn-danger">go live</button>
+    <hr>
+    <button class="btn btn-outline-danger">go live</button>
+    <button class="btn btn-secondary">go live</button>
+    <button class="btn btn-dark">go live</button>
+    <button class="btn btn-light ">go live</button>
+    <hr>
+    <!-- full width button -->
+    <div class="d-grid"><button class="btn btn-danger">button</button></div>
+    <hr>
+    <!-- spinners -->
+    <span class="spinner-border"></span>
+    <span class="spinner-grow text-info"></span>
+    <hr>
+    <!-- alert -->
+    <div class="alert alert-primary"> Hello world</div>
+    <hr>
+    <!-- spinner with css -->
+    <div class="hello"></div>
+    <hr>
+    <!-- prograss bar -->
+
+    <div class="progress">
+        <div class="progress-bar" style="width: 50%;">50%</div>
+    </div>
+<br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" style="width: 50%;">50%</div>
+    </div>
+
+    <br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 50%;">50%</div>
+    </div>
+    <hr>
+    <!-- btn grp -->
+    <div class="btn-group" style="margin: 10px;">
+        <input type="text" class="btn btn-dark">
+        <button class="btn btn-success">search</button>
+    </div>
+
+    <!-- list group -->
+    <ul class="list-group">
+        <li class="list-group-item">one</li>
+        <li class="list-group-item">two</li>
+        <li class="list-group-item">three</li>
+    </ul>
+    <!-- m ett typing just need to study-->
+    <!-- div>div>h1.heading>a -->
+    <div>
+        <div class="alert alert-success">
+            <h1 class="heading">click<a href="#" class="alert-link text-success">here</a></h1>
+        </div>
+    </div>
+
+    <!-- multiple button making    "button*5" -->
+    
+    <!-- container and container fluid classes -->
+
+
+</body>
+
+</html>
