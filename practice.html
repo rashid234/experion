@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {}
+
+        main {
+            background-image: url(pexels-roberto-nickson-2885320.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 30px;
+            height: 650px;
+            width: 400px;
+            align-items: center;
+        }
+
+        .box {
+            background-color: white;
+            position: relative;
+            border-radius: 0 0 30px 30px;
+            top: 8rem;
+            width: 400px;
+            height: 400px;
+            flex-direction: column;
+        }
+
+        .namediv {
+            position: relative;
+            top: -80px;
+            left: 120px;
+            
+        }
+
+        .box img {
+
+            width: 10rem;
+            height: 10rem;
+            border-radius: 100px;
+        }
+
+        .boxinside2 {
+            position: relative;
+            padding: 20px 5px;
+            box-sizing: border-box;
+            margin-left: 10%;
+            width: 80%;
+            top: -100px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: solid 2px;
+            border-bottom: solid 2px;
+        }
+
+        .innerela {
+            flex-direction: column;
+        }
+
+        button {
+            position: relative;
+            background-color: rgb(30, 0, 255);
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            top: -70px;
+            left: 100px;
+            margin: 20px;
+            padding: 10px 20px;
+            width: 150px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <main class="flex">
+        <div class="box flex">
+            <div class="namediv">
+                <img src="pexels-mohamed-abdelghaffar-13651842.jpg" alt="">
+                <h1 class="name">Geeft Vorm</h1>
+                <h2>UI/UX Designer</h2>
+            </div>
+            <div class="boxinside2">
+                <div class="flex innerela">
+                    <h3>Projects</h3> 7
+                </div>
+                <div class="flex innerela">
+                    <h3>Following</h3>237
+                </div>
+                <div class="flex innerela">
+                    <h3>followers</h3>367
+                </div>
+            </div>
+            <button>Follow</button>
+        </div>
+    </main>
+</body>
+
+</html>
