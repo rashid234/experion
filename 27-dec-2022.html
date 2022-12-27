@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- css only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="lib/fontawesome-free/css/all.css">
+
+     <style>
+        .box{
+            display: flex;
+        }
+        .avatar{
+            width: 20px;
+            transition-duration:0.5s ;
+        }
+        .avatar:hover{
+            z-index:5;
+            transform: scale(1.2);
+        }
+        .overlap{
+            margin-left: -10px;
+        }
+        .emaill{
+            display: flex;
+        }
+        .emaill:hover::after{
+            content: url(lib/fontawesome-free/svgs/solid/envelope.svg); 
+            width: 20px;
+            margin: 4px;
+        }
+     </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-info">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Avatar</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <div class="box">
+                        <img src="man.png" alt="" class="avatar">
+                        <img src="man.png" alt="" class="avatar overlap">
+                        </div>
+                    </td>
+                     <td>user1</td>
+                    <td> <span class="emaill"> user1@mail.com 
+                        <!-- used for special character that cannot be entered directly  from keyboard -->
+                        <span class="badge bg-success" >&check;</span> 
+                        </span>
+                        <!-- --------- -->
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                        <button class="btn btn-warning"><span class="fa fa-eye">View</span></button>
+                        <button class="btn btn-danger"><span class="fa fa-eye">Delete</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="man.png" alt="" style="width: 20px;"></td>
+                    <td>user2</td>
+                    <td> <span class="emaill"> user2@mail.com </span></td>
+                    <td>
+                        <div class="btn-group">
+                        <button class="btn btn-warning"><span class="fa fa-eye">View</span></button>
+                        <button class="btn btn-danger"><span class="fa fa-eye">Delete</span></button>
+                        </div>
+                    </td>
+                </tr><tr>
+                    <td>3</td>
+                    <td><img src="man.png" alt="" style="width: 20px;"></td>
+                    <td>user3</td>
+                    <td> <span class="emaill"> user3@mail.com </span>  </td>
+                    <td>
+                        <div class="btn-group">
+                        <button class="btn btn-warning"><span class="fa fa-eye">View</span></button>
+                        <button class="btn btn-danger"><span class="fa fa-eye">Delete</span></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
