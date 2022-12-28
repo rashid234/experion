@@ -12,7 +12,12 @@
     // "no-undef":"off"
     "prefer-const":"warn",
     "camelcase":"warn",
-    "quotes":[1,"single"],
-    "spaced-comment":"warn"
+    "quotes":[1,"single",{
+      "avoidEscape":true,
+      "allowTemplateLiterals":true
+    }],
+    "spaced-comment":"warn",
+    "semi":"error",
+    "space-infix-ops":"warn"
    }
 }
