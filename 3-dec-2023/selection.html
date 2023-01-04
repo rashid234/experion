@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>click</button>
+    <button>click</button>
+    <div>
+        <button>click</button>
+        <button>click</button>
+        <button id="hello">click</button>
+    </div>
+<div id="tar"></div>
+<div id="tar2"></div>
+    <script>
+        // by  using queryselector we can select it  exactly as in css, it is more advantage
+        const buttons = document.querySelectorAll('div button');
+        const buttons2 = document.querySelectorAll('div button #hello');
+        buttons.forEach(btn => {
+            btn.style.backgroundColor = 'aqua';
+            btn.style.margin = '20px';
+        });
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.target.innerText = 'clicked';
+            });
+        });
+
+
+        var tag = document.createElement('h1');
+        tag.innerText = 'h1 tag';
+        document.body.appendChild(tag);    // make the h1 tag to the child of body.
+
+        var tag1 = document.querySelector('#tar');
+        var tag2 = document.querySelector('#tar2');
+        tag1.innerText = '<h1>hello world</h1>';
+        tag2.innerHTML = '<h1>hello world</h1>';
+
+        console.log(tag2.parentElement);
+    </script>
+</body>
+
+</html>

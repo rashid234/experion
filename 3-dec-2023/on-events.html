@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onfocus is used to invoke a functon when we select an element through keyboard or mouse
+         but onclick is only for mouse -->
+    <input type="text" id="target" onfocus="executeEvent(event)"/>   
+    <input type="button" value="select" onclick="selectTextbox()"> 
+    <input type="text" id="target1" onkeypress="executeEvent(event)">
+    <h1 id="heading1"></h1>  
+    <!-- on change events -->
+    <input type="range" name="" id="" min="10" max="500" onchange="newEvent(event)">
+    <div id="button" style="background-color: blueviolet;height:100px;"></div>
+    <script>
+        function selectTextbox(){
+            document.getElementById('target').focus();
+        }
+        function executeEvent(e){
+            document.getElementById('heading1').innerText = e.target.value;
+            console.log(e);
+        }
+        const btn = document.getElementById('button');
+        // providing onchange events
+        function newEvent(e){
+            btn.style.width = `${e.target.value}px`;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border: solid 1px black;
+    }
+    th{
+        border: solid 1px black;
+    }
+    td{
+        border: solid 1px black;
+    }
+</style>
+<body>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>user</th>
+                <th>email</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody id="content">
+
+        </tbody>
+    </table>
+    <script>
+        const users = [
+            {
+                name: 'user1',
+                email: 'user1@mail.com'
+            },
+            {
+                name: 'user2',
+                email: 'user2@mail.com'
+            },
+            {
+                name: 'user3',
+                email: 'user3@mail.com'
+            }
+        ]
+        const target = document.getElementById('content');
+        const table = document.getElementById('table');
+        users.forEach(user => {
+            target.innerHTML += `<tr><td>${user.name}</td><td>${user.email}</td><td><button id='${user.name}'>delete</button></td></tr>`;
+        });
+        const btn = document.querySelectorAll('button');
+        btn.forEach(btnn => {
+            btnn.addEventListener('click', e => {
+                console.log(e.target.id);
+                var arr = [].slice.call(table.rows);
+                var arr2 = arr.slice(1, (arr.length));
+                console.log(arr2[0].innerHTML.slice(4, 9));
+                for (let i = 0; i < arr2.length; i++) {
+                    if (e.target.id == arr2[i].innerHTML.slice(4, 9)) {
+                        table.deleteRow(i + 1);
+                    };
+                };
+                // if(e.target.id == )
+            });
+        });
+        // function execute(e){
+
+        //     // my code
+        //     // var arr = [].slice.call(table.rows);
+        //     // var arr2 = arr.slice(1,(arr.length));
+        //     // arr2.forEach( row=>{
+        //     //     console.log(row.outerText.slice(0,5));
+        //     // })
+        // }
+    </script>
+</body>
+
+</html>

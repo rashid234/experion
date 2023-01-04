@@ -1,0 +1,13 @@
+{
+{ 
+    "name":"mr x",
+    "age":23,
+    "mark1":3,
+    "mark2":8
+},
+{
+"name":"passenger1",
+"id":1,
+"age":25
+}
+}
