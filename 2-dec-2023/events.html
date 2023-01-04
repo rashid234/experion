@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello wolrd</p>
+    <p>how r u</p>
+    <!-- onclick event for button click -->
+    <button onclick="clicked(event)">alert</button>    
+    <button onclick="clicked(event)">alert</button>    
+    <script>
+    function clicked(e){
+        console.log('button clicked');
+        alert('hai');
+        e.target.innerText = 'clicked';
+        e.target.style.padding = '20px';
+        e.target.style.borderRadius = '10px';
+        e.target.style.border = 0;
+        e.target.style.backgroundColor = 'red';
+
+
+
+        let h = document.getElementsByTagName('p');
+        h[0].style.display = 'none';
+        // h[1].remove();   this statement will remove the elemnt from the body
+        // h[1].removeAttribute('style')       used to remove an entire attribute
+
+        // to set an attribute pass attribute and values as parameter in the function 
+        h[1].setAttribute('style','color:red;font-size:50px;');    
+
+        
+
+        // const ff = Object.values(h)
+        // console.log(ff);
+        // ff.slice(0,1).target.innerText = 'quick';
+
+    }
+   
+    </script>
+</body>
+</html>
