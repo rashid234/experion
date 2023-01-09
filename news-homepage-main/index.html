@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | News homepage</title>
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <style>
+    @font-face {
+      font-family: 'basicFont';
+      src: url(assets/fonts/static/Inter-Regular.ttf);
+    }
+
+    @font-face {
+      font-family: 'bigFont';
+      src: url(assets/fonts/static/Inter-ExtraBold.ttf);
+    }
+
+    * {
+      font-family: 'basicFont', sans-serif;
+    }
+
+    main {
+      margin: 5px;
+      margin-top: 20px;
+    }
+
+    #navbarSupportedContent {
+      margin-left: 650px;
+    }
+
+    #mainDiv img {
+      content: url(assets/images/image-web-3-desktop.jpg);
+      width: 730px;
+    }
+
+    #mainDiv section {
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 47px;
+      font-weight: 800;
+      font-family: 'bigFont';
+    }
+
+    .para {
+      font-family: 'basicFont';
+      font-size: 15px;
+      font-weight: 400;
+      color: hsl(236, 13%, 42%);
+    }
+
+    #btn1 {
+      background-color: hsl(5, 85%, 63%);
+      padding: 10px 25px;
+      letter-spacing: 2px;
+      border: 0;
+      color: white;
+      margin-top: 20px;
+    }
+    #NewitemsDiv{
+      margin: 0px 0px;
+      padding: 20px;
+      color: hsl(236, 13%, 42%);
+      background-color: hsl(240, 100%, 5%);
+    }
+    #NewitemsDiv h2{
+      color: hsl(35, 77%, 62%);
+      font-weight: 700;
+      font-size: 30px;
+      margin: 10px 0;
+      margin-bottom: 20px;
+    }
+    #NewitemsDiv h3{
+      color: hsl(36, 100%, 99%);
+      margin: 15px 0;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    #itemDiv{
+      margin-top: 80px;
+      margin-bottom: 50px;
+    }
+    #itemDiv h5{
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .itemImgs{
+      width: 100px;
+      height: 100px;
+    }
+
+    .itemHead{
+      color: hsl(36, 100%, 91%);
+      font-weight: 800;
+      font-size: 20px;
+    }
+    @media screen and (max-width: 1000px) {
+      #navbarSupportedContent {
+        margin-left: 80%;
+      }
+
+      #mainDiv img {
+        content: url(assets/images/image-web-3-mobile.jpg);
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+      #NewitemsDiv{
+      margin: 20px 0px;
+      margin-top: 50px;
+    }
+    #itemDiv{
+      margin-top: 60px;
+      margin-bottom: 100px;
+    }
+  }
+  </style>
+</head>
+
+<body class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><h2 style="font-weight: 900;font-family: sans-serif;">W.</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Popular</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categories</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="row">
+      <div class="col-12 col-lg-8" id="mainDiv">
+        <img alt="">
+        <section class="row">
+          <div class="col-11 col-lg-6">
+            <h1>The Bright feature of Web 3.0?</h1>
+          </div>
+
+          <div class="col-11 col-lg-6">
+            <p class="para">We dive into the next evolution of the web that claims to put the power of the platforms
+              back into the hands of the people. But is it really fulfilling its promise?
+            </p>
+            <button id="btn1">READ MORE</button>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-lg-3" id="NewitemsDiv">
+        <h2>New</h2>
+        <div class="newitems">
+          <h3> Hydrogen VS Electric Cars</h3>
+        <p>Will hydrogen-fueled cars ever catch up the EVs?</p></div>
+        <hr>
+        <div class="newitems"><h3>The Downsides of AI Artistry </h3>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p></div>
+        <hr>
+        <div class="newitems"><h3>Is VC Funding Drying Up?</h3>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p></div>
+      </div>
+      <div class="col-12 row" id="itemDiv">
+        <div class="col-12 col-lg-4 row"><img class="col-2 itemImgs" src="assets/images/image-retro-pcs.jpg" alt="">
+        <div class="col-8">
+        <h4 class="itemHead">01</h4>
+        <h5>Reviving Retro PCs</h5>
+        <p class="para" style="font-size: 13px;">What happens when old PCs are given with modern upgrades?</p>
+        </div>
+        </div>
+        <div class="col-12 col-lg-4 row"><img class="col-2 itemImgs" src="assets/images/image-top-laptops.jpg" alt="">
+          <div class="col-8">
+          <h4 class="itemHead">02</h4>
+          <h5>Top 10 laptops of 2022</h5>
+          <p class="para" style="font-size: 13px;">Our best picks of various needs and budgets</p>
+          </div>
+          </div>
+          <div class="col-12 col-lg-4 row"><img class="col-2 itemImgs" src="assets/images/image-gaming-growth.jpg" alt="">
+            <div class="col-8">
+            <h4 class="itemHead">03</h4>
+            <h5>The Growth of Gaming</h5>
+            <p class="para" style="font-size: 13px;">How the pandemic has sparked fresh opportunities.</p>
+            </div>
+            </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
